@@ -67,6 +67,7 @@ const contacts = [
                 texto: 'Fui a caminar y estuve leyendo.',
                 status: 'visto'
             }
+            
         ]
     },
     {

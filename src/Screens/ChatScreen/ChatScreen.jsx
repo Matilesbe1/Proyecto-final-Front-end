@@ -9,17 +9,15 @@ import Chats from '../../Components/Chats/Chats'
 
 const ChatScreen = () => {
 
-    //CONSEGUIR EL ID DEL CONTACTO
     const { contact_id } = useParams();
     const contact_selected = getContactById(contact_id);
     const [messages, setMessages] = useState(contact_selected.messages)
     const [newMessage, setNewMessage] = useState('');
-    //CADA VEZ QUE SE ACTUALIZA EL SETMESSAGE, SE ACTUALIZA EL CHAT
     useEffect(() => {
-        setMessages(contact_selected.messages)
-    },
-        [contact_id]
-    )
+        setMessages(contact_selected.messages || []);
+    }, [contact_id, contact_selected]);
+
+
 
     const deleteMessageById = (message_id) => {
         const new_message_list = []
@@ -32,45 +30,58 @@ const ChatScreen = () => {
     }
 
     const handleSubmitSendMessageForm = (event) => {
-        event.preventDefault()
-        let messageText = newMessage
-        addNewMessage(messageText)
-        setNewMessage('')
-    }
+        event.preventDefault();
+        const newDate = new Date();
+            const newMsg = {
+                emisor: 'YO',
+                hora: newDate.getHours() + ':' + newDate.getMinutes(),
+                id: messages.length +1,
+                texto: newMessage,
+                status: 'no-visto'
+            };
+            setMessages(prevMessages => [...prevMessages, newMsg]);
+            setNewMessage('');
+        }
+    
+
 
 
     const addNewMessage = (messageText) => {
         const newMessageObject = {
             emisor: 'YO',
-            hora: new Date().getHours() + ':' + new Date().getMinutes(),
+            hora: newDate.getHours() + ':' + newDate.getMinutes(),
             text: messageText,
             status: 'no-visto',
-            id: messages.length + 1
+            id: messages.length +1,
         }
-        
+        setMessages(prevMessages => [...prevMessages, newMessageObject]);
+        setNewMessage('');
+    }
 
-        return (
-            <div>
-                <div className="main-content">
-                    <ContactsLeftSide />
-                    <ContactsMain />
-                    <div className="chats-section">
-                        <div className='chat'>
-                            <Chats messages={messages} name={contact_selected.name} img={contact_selected.profileImg} deleteMessageById={deleteMessageById}/>
-                        </div>
-                        <div className='footer-input'>
-                            <form onSubmit={handleSubmitSendMessageForm}>
-                                <div>
-                                    <label htmlFor="message">Escribe un Mensaje</label>
-                                    <input type="text" placeholder="Escribe un mensaje" name='message' id='message' required className='input-message' value={newMessage} onChange={(event) => setNewMessage(event.target.value)} />
-                                </div>
-                                <button type='submit' onClick={addNewMessage}><i className="bi bi-send-fill"></i></button>
-                            </form>
-                        </div>
+
+    return (
+        <div>
+            <div className="main-content">
+                <ContactsLeftSide />
+                <ContactsMain />
+                
+                <div className="chats-section">
+                    <div className='chat'>
+                        <Chats messages={messages} name={contact_selected.name} img={contact_selected.profileImg} deleteMessageById={deleteMessageById} />
+                    </div>
+                    <div className='footer-input'>
+                        <form onSubmit={handleSubmitSendMessageForm}>
+                            <div>
+                                <label htmlFor="message">Escribe un Mensaje</label>
+                                <input type="text" placeholder="Escribe un mensaje" name='message' id='message' required className='input-message' value={newMessage} onChange={(event) => setNewMessage(event.target.value)} />
+                            </div>
+                            <button type='submit' onClick={() => { addNewMessage }}><i className="bi bi-send-fill"></i></button>
+                        </form>
                     </div>
                 </div>
             </div>
-        )
-    }
+        </div>
+    )
 }
+
 export default ChatScreen

@@ -3,11 +3,12 @@ import ChatItem from './ChatItem'
 import "./Chats.css"
 import ChatList from './ChatList'
 
-const Chats = ({name, messages, img, id}) => {
+const Chats = ({messages, deleteMessageById, img, name}) => {
     return (
-        <div>
+        <div className='chats-container'>
             <div className="header">
                 <div className='header-left'>
+                    <button onClick={()=>{(window.location.href = "/")}}><i className=" bi bi-arrow-left"></i></button>
                     <img src={img} alt={name} />
                     <h2>{name}</h2>
                 </div>
@@ -17,8 +18,9 @@ const Chats = ({name, messages, img, id}) => {
                     <button><i className="header-right-symbol bi bi-three-dots-vertical"></i></button>
                 </div>
             </div>
-            <div className="main">
-                <ChatList messages={messages} id={id} />
+            <div className="main-chat">
+                <ChatList messages={messages} deleteMessageById={deleteMessageById}/>
+                
             </div>
         </div>
     )

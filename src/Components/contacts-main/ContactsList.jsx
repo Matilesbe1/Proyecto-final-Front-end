@@ -12,16 +12,3 @@ const ContactsList = ({ contacts }) => {
 }
 
 export default ContactsList
-
-
-/* 
- {contacts.map((contact) => (
-                <ContactsItem
-                    key={contact.id}
-                    name={contact.name}
-                    img={contact.profileImg}
-                    last_conection={contact.last_conection}
-                    contact={contact}
-                />
-            ))}
-*/
