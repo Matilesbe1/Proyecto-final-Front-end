@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import ContactsList from "../Components/contacts-main/ContactsList";
-import { getContactList } from "../services/getContactServices";
-import ContactsLeftSide from "../Components/Contacts-options-left/contacts-options";
-import ContactsMain from "../Components/contacts-main/contacts-main";
+import ContactsList from "../../Components/contacts-main/ContactsList";
+import { getContactList } from "../../services/getContactServices";
+import ContactsLeftSide from "../../Components/Contacts-options-left/contacts-options";
+import ContactsMain from "../../Components/contacts-main/contacts-main";
+import "./ContactScreen.css";
 
 const ContactScreen = () => {
     const contacts=getContactList()

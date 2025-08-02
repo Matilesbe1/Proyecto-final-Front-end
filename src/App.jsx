@@ -1,8 +1,8 @@
 import React from "react"
 import "./styles.css"
-import ChatScreen from "../Screens/ChatScreen"
-import ContactScreen from "../Screens/ContactScreen"
 import { Routes, Route } from "react-router"
+import ContactScreen from "./Screens/ContactScreen/ContactScreen"
+import ChatScreen from "./Screens/ChatScreen/ChatScreen"
 
 function App() {
 
@@ -11,7 +11,6 @@ function App() {
       <Routes>
         <Route path='/' element={<ContactScreen/>} /> {/* RUTA PRINCIPAL */}
         <Route path='/contact/:contact_id/messages' element={<ChatScreen/>} />
-        {/* CUANDO ESTEMOS EN LA DIRECCION MESSAGES, VAS A MOSTRAR CHATSCREEN */}
       </Routes>
     </>
   )

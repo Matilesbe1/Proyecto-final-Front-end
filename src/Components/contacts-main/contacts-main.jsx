@@ -468,8 +468,8 @@ const ContactsMain = () => {
                     <h1>WhatsApp</h1>
                 </div>
                 <div>
-                    <button><i className="bi bi-chat-square"></i></button>
-                    <button><i className="bi bi-three-dots-vertical"></i></button>
+                    <button title='Nuevo chat'><i className="bi bi-chat-square"></i></button>
+                    <button title='Menu'><i className="bi bi-three-dots-vertical"></i></button>
                 </div>
 
             </div>
