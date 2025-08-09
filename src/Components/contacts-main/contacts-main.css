@@ -7,22 +7,23 @@
     --color-principal-500: #161717;
 }
 
-
 .contacts-main {
     display: flex;
     flex-direction: column;
     width: 30%;
-    min-width: 30%;
+    min-width: 30rem;
     background-color: var(--color-principal-500);
     color: white;
+    height: 100vh;
+    overflow-y: auto;
 }
 
 .contacts-main-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px, 10px;
-    margin: 20px;
+    padding: 2rem, 1rem;
+    margin: 2rem;
 }
 
 .contacts-main-header button {
@@ -31,12 +32,15 @@
     align-items: center;
 }
 
-.bi-three-dots-vertical, .bi-chat-square {
+.bi-three-dots-vertical,
+.bi-chat-square {
     background-color: var(--color-principal-500);
-    padding: 10px;
+    padding: 1rem;
     border-radius: 50%;
 }
-.bi-three-dots-vertical:hover, .bi-chat-square:hover{
+
+.bi-three-dots-vertical:hover,
+.bi-chat-square:hover {
     background-color: var(--color-principal-300);
     cursor: pointer;
 }
@@ -45,25 +49,26 @@
 .contacts-main-search {
     display: flex;
     align-items: center;
-    margin: 20px;
+    margin: 2rem;
 }
 
 .contacts-main-search button {
     border: none;
     border-radius: 50%;
     background-color: var(--color-principal-300);
-    padding: 10px;
-    margin: -17px;
+    padding: 1rem;
+    margin: -1.7rem;
     z-index: 1;
 }
-.bi-search{
+
+.bi-search {
     background-color: var(--color-principal-300);
 }
 
 .contacts-main-search input {
     background-color: var(--color-principal-300);
     border: none;
-    padding: 20px;
+    padding: 2rem;
     width: 100%;
 }
 
@@ -74,16 +79,16 @@
 
 .contacts-main-options-buttons button {
     display: flex;
-    gap: 10px;
-    padding: 10px;
-    margin: 10px;
+    gap: 1rem;
+    padding: 1rem;
+    margin: 1rem;
     border: 1px solid var(--color-principal-300);
-    border-radius: 10px;
+    border-radius: 1rem;
     background-color: var(--color-principal-500);
     color: white;
-    font-size: 20px;
+    font-size: 2rem;
     height: min-content;
-    
+
 }
 
 .contacts-main-options-buttons button:hover {
@@ -101,7 +106,7 @@
 .contacts-main-archived {
     display: flex;
     justify-content: space-between;
-    margin: 30px;
+    margin: 3rem;
 }
 
 .contacts-main-archived:hover {
@@ -110,7 +115,7 @@
 
 .contacts-main-archived-left {
     display: flex;
-    gap: 30px;
+    gap: 3rem;
     align-items: center;
 }
 
@@ -119,22 +124,22 @@
 }
 
 .contacts-main-contacts {
-    margin: 10px;
+    margin: 1rem;
 }
 
 .contacts-item {
     display: flex;
-    gap: 20px;
-    padding: 10px;
-    margin-bottom: 20px;
+    gap: 2rem;
+    padding: 1rem;
+    margin-bottom: 2rem;
     color: white;
-    font-size: 20px;
-    border-radius: 10px;
+    font-size: 2rem;
+    border-radius: 1rem;
 }
 
 .contacts-item img {
-    width: 60px;
-    height: 60px;
+    width: 6rem;
+    height: 6rem;
 }
 
 .contacts-item:hover {
@@ -142,8 +147,8 @@
     cursor: pointer;
 }
 
-@media (max-width:1400px){
-    .contacts-main{
+@media (max-width:1400px) {
+    .contacts-main {
         position: absolute;
         z-index: 1;
         width: 100%;
@@ -151,8 +156,9 @@
     }
 
 }
-@media(max-width:550px){
-    .contacts-main{
+
+@media(max-width:550px) {
+    .contacts-main {
         left: 0;
     }
 }

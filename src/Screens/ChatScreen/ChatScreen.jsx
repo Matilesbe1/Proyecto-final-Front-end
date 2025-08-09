@@ -60,11 +60,8 @@ const ChatScreen = () => {
 
 
     return (
-        <div>
+        <div className='chat-container'>
             <div className="main-content">
-                <ContactsLeftSide />
-                <ContactsMain />
-                
                 <div className="chats-section">
                     <div className='chat'>
                         <Chats messages={messages} name={contact_selected.name} img={contact_selected.profileImg} deleteMessageById={deleteMessageById} />

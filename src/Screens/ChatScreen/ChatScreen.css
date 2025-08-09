@@ -1,13 +1,25 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
 
 
+:root {
+    --color-principal-300: #2e2f2f;
+    --color-principal-400: #161717;
+}
 
-.main-content {
+.chat-container {
+    width: 100vw;
+    height: 100vh;
     display: flex;
 }
 
+.main-content {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
 .chat {
-    height: 100dvh;
+    height: calc(100vh - 7rem);
     overflow-y: auto;
 }
 
@@ -15,19 +27,19 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 100dvh;
+    height: 100vh;
 }
 
 form {
     display: flex;
-    gap: 20px;
+    gap: 2rem;
     color: white;
     background-color: var(--color-principal-400);
-    padding: 10px;
+    padding: 1rem;
     align-items: center;
     justify-content: center;
+    height: 7rem;
 }
-
 
 .input-message {
     border: none;
@@ -35,8 +47,9 @@ form {
     color: white;
     text-align: center;
     display: flex;
-    font-size: 30px;
-
+    font-size: 1.6rem;
+    width: 80%;
+    padding: 1rem;
 }
 
 .footer-input input:hover {
@@ -56,7 +69,7 @@ form {
     border-radius: 50%;
     display: flex;
     align-items: center;
-    font-size: 50px;
+    font-size: 2.5rem;
 }
 
 .bi-send-fill:hover {
@@ -64,8 +77,7 @@ form {
     background-color: #21c063;
 }
 
-@media(max-width:1400px) {
-
+@media(max-width: 1400px) {
     .chats-section {
         position: absolute;
         z-index: 2;
@@ -74,5 +86,4 @@ form {
     .main-content {
         position: relative;
     }
-
 }

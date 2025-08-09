@@ -1,155 +1,188 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
 
 
-:root{
-    --color-principal-300:#2e2f2f;
-    --color-principal-400:#161717;
+:root {
+    --color-principal-300: #2e2f2f;
+    --color-principal-400: #161717;
 }
 
-body{
+body {
     background-color: grey;
 }
 
-.header{
+.header {
     display: flex;
     justify-content: space-between;
     color: white;
     background-color: var(--color-principal-400);
-    padding: 10px;
+    padding: 1rem;
     position: sticky;
     top: 0;
+    height: 7rem;
 }
-.header:hover{
+
+.header:hover {
     cursor: pointer;
 }
-.header-left{
+
+.header-left {
     display: flex;
-    gap: 20px;
+    gap: 2rem;
     align-items: center;
 }
 
-.header-right{
+.header-right {
     color: white;
     display: flex;
-    gap: 50px;
+    gap: 2rem;
 }
-.header-right button{
+
+.header-right button {
     border: none;
     background-color: var(--color-principal-400);
 }
-.header-right-symbol{
+
+.header-right-symbol {
     background-color: var(--color-principal-400);
-    padding: 10px;
+    padding: 1rem;
     border-radius: 50%;
 }
-.header-right-symbol:hover{
+
+.header-right-symbol:hover {
     cursor: pointer;
-    background-color:var(--color-principal-300) ;
+    background-color: var(--color-principal-300);
 }
 
-.chat-content{
-    padding: 10px 25px 0;
+.chat-content {
+    padding: 1rem 2.5rem 0;
     display: flex;
     flex-direction: column;
-    background-color: gray;
+    background-color: grey;
     overflow: hidden;
 }
-.chat-item{
-    margin: 30px 0;
+
+
+.chat-item {
+    margin: 3rem 0;
     display: flex;
     flex-direction: row;
     color: white;
-    font-size: 24px;
+    font-size: 1.6rem;
     font-weight: 400;
-    border-radius: 10px;
+    border-radius: 1rem;
 }
 
-.check-message-icon{
+.check-message-icon {
     color: #4bafd5;
     background-color: #144d37;
 }
-.check-message-icon:hover{
+
+.check-message-icon:hover {
     background-color: #144d37;
     cursor: auto;
 }
-.chat-item-messages-yo{
+
+.chat-item-messages-yo {
     justify-content: flex-end;
     background-color: #144d37;
     align-items: center;
-    padding: 10px 20px;
-    gap: 20px;
+    padding: 1rem 2rem;
+    gap: 2rem;
     margin-left: auto;
 }
 
-.chat-item-messages-yo p{
+.chat-item-messages-yo p {
     border-right: 1px solid rgba(126, 123, 123, 0.677);
-    padding-right: 10px;
-    
+    padding-right: 1rem;
+
 }
-.chat-item-messages-yo button{
+
+.chat-item-messages-yo button {
     border: none;
     background-color: #144d37;
 }
-.chat-item-messages-yo .bi-trash{
+
+.chat-item-messages-yo .bi-trash {
     background-color: #144d37;
 }
 
-.chat-item-messages-otro{
+.chat-item-messages-otro {
     margin-right: auto;
     background-color: #242626;
     align-items: center;
-    padding: 10px 20px;
-    gap: 20px;
-    
+    padding: 1rem 2rem;
+    gap: 2rem;
+
 }
-.chat-item-messages-otro p{
+
+.chat-item-messages-otro p {
     border-right: 1px solid rgba(126, 123, 123, 0.677);
-    padding-right: 10px;
-    
+    padding-right: 1rem;
+
 }
-.chat-item-messages-otro button{
+
+.chat-item-messages-otro button {
     border: none;
     background-color: #242626;
 }
-.chat-item-messages-otro .bi-trash{
+
+.chat-item-messages-otro .bi-trash {
     background-color: #242626;
 }
-.main-chat{
+
+.main-chat {
     background-color: grey;
     height: 100cap;
-    
+
 }
 
 
-.without-messages{
+.without-messages {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 50vh;
     color: white;
-    font-size: 32px;
+    font-size: 3.2rem;
+    position:sticky;
+    top: 0;
+    
 }
-.header-left button{
+
+.header-left button {
     border: none;
     display: none;
 }
-.bi-arrow-left{
+
+.bi-arrow-left {
     background-color: var(--color-principal-400);
 }
-@media (max-width:1400px){
-    
-    .header-left button{
+
+@media (max-width:1400px) {
+
+    .header-left button {
         display: flex;
     }
-    .bi-camera-video, .bi-search{
+
+    .bi-camera-video,
+    .bi-search {
         display: none;
     }
 }
-@media (max-width:378px){
-    .chats-container{
+
+@media (max-width:378px) {
+    .main-chat {
         overflow-x: hidden;
+        overflow-y: hidden;
+        position: static;
     }
-    .header-right{
-        gap: 20px;
+    .without-messages{
+        font-size: 2rem;
+        position: static;
+        
+    }
+
+    .header-right {
+        gap: 2rem;
     }
 }

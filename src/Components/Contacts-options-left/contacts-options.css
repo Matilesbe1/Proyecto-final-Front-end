@@ -1,60 +1,69 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
-:root{
-    --color-principal-300:#2e2f2f;
-    --color-pricipal-400:#1d1f1f;
+
+:root {
+    --color-principal-300: #2e2f2f;
+    --color-pricipal-400: #1d1f1f;
 }
 
-.contacts-options{
+.contacts-options {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     background-color: var(--color-pricipal-400);
-    width: 50px;
-    padding: 20px;
-
+    width: 5rem;
+    padding: 2rem;
+    height: 100vh;
 }
-.contacts-options-top{
+
+.contacts-options-top {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.contacts-options-top button{
+
+.contacts-options-top button {
     border: none;
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
     border-radius: 50%;
-    padding: 10px;
+    padding: 1rem;
     background-color: var(--color-pricipal-400);
 }
-.contacts-options-top button:hover, .bi:hover, .contacts-options-bottom button:hover{
+
+.contacts-options-top button:hover,
+.bi:hover,
+.contacts-options-bottom button:hover {
     background-color: var(--color-principal-300);
     cursor: pointer;
 }
-.bi{
-    font-size: 30px;
+
+.bi {
+    font-size: 3rem;
     color: white;
     background-color: var(--color-pricipal-400);
 }
 
-.contacts-options-bottom{
+.contacts-options-bottom {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.contacts-options-bottom button{
+
+.contacts-options-bottom button {
     border: none;
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
     border-radius: 50%;
-    padding: 10px;
+    padding: 1rem;
     background-color: var(--color-pricipal-400);
 }
-img{
+
+img {
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    width: 5rem;
+    height: 5rem;
 }
 
 @media (max-width: 1400px) {
-    .contacts-options{
+    .contacts-options {
         display: none;
     }
 }
