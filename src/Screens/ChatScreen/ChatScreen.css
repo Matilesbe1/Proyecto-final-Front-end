@@ -1,3 +1,73 @@
-.left{
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+
+
+
+.main-content {
     display: flex;
+}
+
+.chat {
+    height: 100dvh;
+    overflow-y: auto;
+}
+
+.chats-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+}
+
+form {
+    display: flex;
+    gap: 10px;
+    color: white;
+    background-color: var(--color-principal-400);
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.input-message {
+    border: none;
+    background-color: var(--color-principal-400);
+    color: white;
+    text-align: center;
+    display: flex;
+    font-size: 15px;
+
+}
+
+.footer-input input:hover {
+    background-color: var(--color-principal-400);
+}
+
+.footer-input button {
+    background-color: var(--color-principal-400);
+    border: none;
+}
+
+.footer-input label {
+    display: none;
+}
+
+.bi-send-fill {
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+}
+
+.bi-send-fill:hover {
+    cursor: pointer;
+    background-color: #21c063;
+}
+
+@media(max-width:940px){
+    .chats-section{
+        position: absolute;
+        left: 0;
+        width: 100%
+    }
 }

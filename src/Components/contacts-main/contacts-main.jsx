@@ -67,6 +67,7 @@ const contacts = [
                 texto: 'Fui a caminar y estuve leyendo.',
                 status: 'visto'
             }
+            
         ]
     },
     {
@@ -476,7 +477,7 @@ const ContactsMain = () => {
             <div className='contacts-main-search'>
                 <label htmlFor="buscarChat"></label>
                 <button><i className="bi bi-search"></i></button>
-                <input type="text" id="buscarChat" placeholder="Buscar un chat o iniciar uno nuevo" />
+                <input type="text" id="buscarChat" placeholder="Buscar Chat" />
             </div>
             <div className='contacts-main-options-buttons'>
                 <button>Todos</button>
